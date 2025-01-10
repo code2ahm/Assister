@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assister - Your Ultimate Discord Companion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #00011f, #001841);
+            color: #ffffff;
+            
+            overflow-x: hidden;
+        }
+
+        section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .welcome-section h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #ffffff;
+            z-index: 1;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            margin: 10px 0 20px;
+            z-index: 1;
+        }
+
+        .invite-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00bfff;
+            color: #15161d;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            z-index: 1;
+        }
+
+        .invite-btn:hover {
+            background: #008fcc;
+            transform: scale(1.1);
+        }
+
+        .features-section h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #00bfff;
+            font-weight: 600;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .feature {
+            flex: 1 1 calc(25% - 1.5rem);
+            max-width: calc(25% - 1.5rem);
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s, background 0.3s;
+            opacity: 0;
+            transform: translateX(-30px);
+            position: relative;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s, background 0.3s;
+            opacity: 0;
+            transform: translateX(-30px);
+            position: relative;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+            background: rgba(0, 191, 255, 0.2);
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+        }
+
+        .description-section h2 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: #00bfff;
+            font-weight: 600;
+        }
+
+        .description-section p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #00bfff;
+        }
+
+        .contact-section a {
+            color: #00bfff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .contact-section a:hover {
+            color: #008fcc;
+        }
+
+        .contact-section .social-links a {
+            margin: 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-section .social-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        footer {
+            background-color: #000315c1;
+            text-align: center;
+            padding: 1rem;
+            color: #a9a9a9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer img.footer-logo {
+            max-width: 150px;
+            height: auto;
+            margin: 0;
+        }
+
+
+        footer a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #008fcc;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="welcome-section">
+        <img src="https://i.imgur.com/8iJLkl1.png" alt="Assister" class="logo">
+        <h1>Welcome to Assister</h1>
+        <p>Your all-in-one solution for Discord server management!</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1207907416549888121" target="_blank" class="invite-btn">Invite Assister</a>
+    </section>
+
+
+
+
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Anti-Nuke Protection</h3>
+                <p>Keep your server safe from threats with state-of-the-art anti-nuke measures. Conquer the nukkers that keep roaming around the servers and stealing your vanity.</p>
+            </div>
+            <div class="feature">
+                <h3>Auto-Moderation</h3>
+                <p>Automatically detect and handle spam, bad links, and unwanted behavior effortlessly. Prevent raids and can block custom words which fall in the antiswear category.</p>
+            </div>
+            <div class="feature">
+                <h3>Auto Roles</h3>
+                <p>Streamline role assignment and ensure a welcoming experience for new members. Get over the old onboarding system and assign roles automatically to the members on joining.</p>
+            </div>
+            <div class="feature">
+                <h3>Moderation Tools</h3>
+                <p>Equip your moderators with powerful tools to manage your server effectively. Kick, ban, mute, warn members according to the convenience. Voice moderation tools also in the list.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="description-section">
+        <h2>About Assister</h2>
+        <p>Assister is trusted by over 200,000 users and powers 500+ Discord servers worldwide. With over 200 commands and extensive functionality, Assister simplifies server management, enhances security, and engages communities.</p>
+        <p>Whether you're running a small community or managing a large server, Assister provides the tools you need to succeed. From anti-nuke protection to advanced moderation and fun features, it's the ultimate Discord companion.</p>
+    </section>
+
+
+
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Need assistance? Join our <a href="https://discord.gg/AtV7WX3qgx" target="_blank"><i class="fa fa-discord"></i> Support Server</a>.</p>
+        <p>Have feedback? Reach out to us at <a href="techassisofc@gmail.com"><i class="fa fa-envelope"></i> support@assister.com</a>.</p>
+        <p>Or, connect with us on social media:</p>
+        <div class="social-links">
+            <a href="https://twitter.com/ahmuuy" target="_blank">Twitter</a> |
+            <a href="https://instagram.com/ahmm.fr" target="_blank">Instagram</a> |
+            <a href="https://github.com/code2ahm/code2ahm" target="_blank">GitHub</a>
+        </div>
+    </section>
+    
+
+
+
+    <footer>
+        <img src="https://i.imgur.com/8iJLkl1.png", alt="Assister", class="footer-logo">
+        <p>&copy; 2024 Assister | Designed by Ahm</p>
+        <p><a href="https://assister.com">Official Website</a> | <a href="https://github.com/code2ahm/Assister/blob/main/Assister%20Privacy%20Policy.md">Privacy Policy</a> | <a href="https://github.com/code2ahm/Assister/blob/main/Assister%20Terms%20Of%20Service.md">Terms Of Service</a></p>
+    </footer>
+
+    <script>
+
+
+
+
+
+
+const sections = document.querySelectorAll('section');
+
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateX(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        const features = document.querySelectorAll('.feature');
+        const featureObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateX(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        features.forEach(feature => {
+            featureObserver.observe(feature);
+        });
+    </script>
+</body>
+</html>
